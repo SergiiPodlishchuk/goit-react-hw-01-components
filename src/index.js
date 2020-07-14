@@ -6,6 +6,8 @@ import Statistics from "./components/Statistics/Statistics.js";
 import statisticalData from "./components/Statistics/statistical-data.json";
 import friends from "./components/FriendList/friendLIst.json";
 import FriendList from "./components/FriendList/FriendList.js";
+import transactions from "./components/TransactionHistory/transaction.json";
+import TransactionHistory from "./components/TransactionHistory/TransactionHistory.js";
 
 ReactDOM.render(
   <Profile
@@ -25,5 +27,10 @@ ReactDOM.render(
 
 ReactDOM.render(
   <FriendList friends={friends} />,
+  document.querySelector("#root")
+);
+
+ReactDOM.render(
+  <TransactionHistory items={transactions} />,
   document.querySelector("#root")
 );

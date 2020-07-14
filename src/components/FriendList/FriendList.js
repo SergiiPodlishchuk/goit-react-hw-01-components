@@ -16,18 +16,6 @@ function FriendList({ friends }) {
               isOnline={friend.isOnline}
               key={friend.id}
             />
-
-            // <li key={friend.id} className={styles.item} style={{}}>
-            //   <span
-            //     className={friend.isOnline ? styles.statusOn : styles.statusOff}
-            //   ></span>
-            //   <img
-            //     className={styles.avatar}
-            //     src={friend.avatar}
-            //     alt={friend.name}
-            //   />
-            //   <p className={styles.name}>{friend.name}</p>
-            // </li>
           );
         })}
       </ul>
