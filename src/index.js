@@ -4,6 +4,8 @@ import Profile from "./components/Profile/Profile.js";
 import user from "./components/Profile/user.json";
 import Statistics from "./components/Statistics/Statistics.js";
 import statisticalData from "./components/Statistics/statistical-data.json";
+import friends from "./components/FriendList/friendLIst.json";
+import FriendList from "./components/FriendList/FriendList.js";
 
 ReactDOM.render(
   <Profile
@@ -18,5 +20,10 @@ ReactDOM.render(
 
 ReactDOM.render(
   <Statistics title="Upload stats" stats={statisticalData} />,
+  document.querySelector("#root")
+);
+
+ReactDOM.render(
+  <FriendList friends={friends} />,
   document.querySelector("#root")
 );

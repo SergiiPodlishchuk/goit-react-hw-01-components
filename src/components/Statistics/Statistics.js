@@ -10,8 +10,6 @@ const randomIntegerFromInterval = (min, max) => {
 };
 
 function Statistics({ title, stats }) {
-  const randomColor = randomIntegerFromInterval(0, 255);
-
   return (
     <section className={styles.statistics}>
       {title && <h2 className={styles.title}>{title}</h2>}
