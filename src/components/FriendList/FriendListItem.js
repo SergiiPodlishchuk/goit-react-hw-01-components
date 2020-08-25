@@ -5,7 +5,7 @@ import s from "./FriendListItem.module.css";
 
 function FriendListItem({ avatar, name, isOnline, id }) {
   return (
-    <li key={id} className={s.item} style={{}}>
+    <li key={id} className={s.item}>
       <span className={isOnline ? s.statusOn : s.statusOff}></span>
       <img className={s.avatar} src={avatar} alt={name} />
       <p className={s.name}>{name}</p>
