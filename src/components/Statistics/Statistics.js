@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import styles from "./Statistics.module.css";
+import s from "./Statistics.module.css";
 
 const randomIntegerFromInterval = (min, max) => {
   const red = Math.floor(Math.random() * (max - min + 1) + min);
@@ -11,20 +11,20 @@ const randomIntegerFromInterval = (min, max) => {
 
 function Statistics({ title, stats }) {
   return (
-    <section className={styles.statistics}>
-      {title && <h2 className={styles.title}>{title}</h2>}
+    <section className={s.statistics}>
+      {title && <h2 className={s.title}>{title}</h2>}
 
-      <ul className={styles.statList}>
-        {stats.map((format) => {
+      <ul className={s.statList}>
+        {stats.map(({ id, label, percentage }) => {
           const randomColor = randomIntegerFromInterval(0, 255);
           return (
             <li
-              key={format.id}
-              className={styles.item}
+              key={id}
+              className={s.item}
               style={{ backgroundColor: randomColor }}
             >
-              <span className={styles.label}>{format.label}</span>
-              <span className={styles.percentage}>{format.percentage}%</span>
+              <span className={s.label}>{label}</span>
+              <span className={s.percentage}>{percentage}%</span>
             </li>
           );
         })}
